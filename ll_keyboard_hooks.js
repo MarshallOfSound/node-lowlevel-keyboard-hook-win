@@ -2,11 +2,12 @@
 
 if (process.platform !== 'win32') return;
 
-const hookKeyboard = require('bindings')('ll_keyboard_hooks');
+const { hookKeyboard } = require('bindings')('ll_keyboard_hooks');
 
 let hooks = {};
 
 hookKeyboard((data) => {
+  console.log(data)
   const keyCodePattern = data.toString().trim().replace(/\n/g, '');
   const keyCodeEvent = keyCodePattern.split('::')[0];
   const keyCode = keyCodePattern.split('::')[1];
