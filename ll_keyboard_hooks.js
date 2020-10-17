@@ -2,7 +2,7 @@
 
 if (process.platform !== 'win32') return;
 
-const hookKeyboard = require('bindings')('ll_keyboard_hooks');
+const { hookKeyboard } = require('bindings')('ll_keyboard_hooks');
 
 let hooks = {};
 

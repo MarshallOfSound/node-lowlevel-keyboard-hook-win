@@ -5,8 +5,9 @@
   "main": "ll_keyboard_hooks.js",
   "gypfile": true,
   "dependencies": {
-    "bindings": "~1.2.1",
-    "nan": "^2.2.0"
+    "bindings": "^1.5.0",
+    "node-addon-api": "*",
+    "node-gyp-build": "^4.2.3"
   },
   "os": [
     "win32"
